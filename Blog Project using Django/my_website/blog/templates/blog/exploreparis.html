@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+      <font color="Olive" face="Orbitron,arial">
+          <h1 align="center"><i>BACKPACKING PARIS </i></h1>
+      </font>
+        <br/>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                      <ol class="carousel-indicators">
+                        <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel" data-slide-to="1"></li>
+                        <li data-target="#carousel" data-slide-to="2"></li>
+                      </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                              <img src="{% static 'blog/images/paris2.jpg' %}" class="d-block w-100" alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                              <img src="{% static 'blog/images/paris3.jpg' %}" class="d-block w-100" alt="Second slide">
+                            </div>
+                            <div class="carousel-item">
+                              <img src="{% static 'blog/images/paris4.jpg' %}" class="d-block w-100" alt="Third Slide">
+                            </div>
+                        </div>
+                          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                          </a>
+                </div>
+            </div>
+          </div>
+        </div>
+<br/>
+<br/>
+<table align="center">
+
+  <th> <a href="{% url 'explorenewyork'%} title="Explore Paris"><img src="{% static 'blog/images/paris5.jpg' %}" height="400"/><br/></a><p>Ready to explore this beautiful Tower?</p></th>
+<h1>About Paris</h1>
+
+<br/>For centuries the city of Paris has been attracting every shade of artist, traveler, philosopher, gypsy and writer. If ever romance was a tactile, tangible thing it seems as if the very foundations of Paris was built with it. Backpacking Paris is the ultimate journey into stunning architecture, culinary delights, world-class museums, hidden gems, and fine cafes.
+
+Now let’s be clear. Paris is MASSIVE. There are so many hip cafes, green parks, and awesome things to do, one can easily feel like a person who hasn’t eaten for days that has just been dropped in front of the world’s biggest gourmet buffet line. Paris is that feast for the senses.
+
+Paris for backpackers is a magical wonderland. There is no getting around this fact however: Paris is an expensive city to travel to. This guide highlights the best tips, tricks, and ideas on how to take Paris by storm without having your wallet feel like a hurricane just rocked through it. Learn how to enjoy Paris on the cheap like a local!
+
+Get insights on backpacker accommodation in Paris, suggested itineraries, your Paris daily budget, awesome things to do in the city, urban hikes around Paris, nightlife, and much much more.
+
+The City of Light is one of my favorite places on earth. By the end of this travel guide, you will be fully prepared to have an awesome Parisian adventure of your own!
+
+      <br/>
+      <br/>
+      <br/>
+</table>
+
+{% endblock %}

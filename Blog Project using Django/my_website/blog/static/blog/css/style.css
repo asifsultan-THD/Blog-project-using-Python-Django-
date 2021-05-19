@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit|Krub|Orbitron|Oxygen|Righteous');
+/*
+body, html {
+  margin: 0;
+} */
+
+
+.nav-main {
+  width: 100%;
+  background-color: black;
+  height: 70px;
+  color: white;
+}
+
+.nav-main .logo {
+float: left;
+height: 60px;
+line-height: 40px;
+padding: 15px 30px;
+font-family: Kanit;
+font-size: 50px;
+}
+.nav-main .logo > span {
+  font-weight: bold;
+  color: yellow;
+  }
+
+.nav-main > ul {
+  margin: 0;
+  padding: 0;
+  float: left;
+  list-style: none;
+}
+.nav-main > ul > li {
+  float: left;
+}
+
+
+.container .row .col-lg-7{
+  margin-top: 35%;
+  font-weight: bold;
+  color: white;
+}
+
+.h3{
+margin-top: 5%;
+margin-left: 10%;
+font-family: Orbitron;
+font-size: 60px;
+}
+
+.random{
+    margin-top: 5%;
+    margin-bottom: 0%;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 200px;
+}
+
+registeration{
+ margin-left: 2%;
+}
+.text-big{
+  font-family: Oxygen;
+  font-size: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 10%;
+}
+.text-small{
+font-family: Oxygen;
+  font-size: 15px;
+
+}
+
+.time{
+    font-family: Oxygen;
+    font-size: 15px;
+}
+
+
+
+
+
+.nav-main > ul > li > a {
+
+  display: inline-block;
+  padding: 15px 20px;
+  height: 60px;
+  line-height: 40px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.nav-main > ul > li > a:hover {
+  background-color: yellow;
+  color: black;
+}
+
+
+.tab {
+  margin-right: 15px;
+  margin-left: 80px;
+  margin-top: 20px;
+  padding: 0px;
+}
+.tab tr, th {
+  background-color: black;
+  padding: 1px;
+}
+.tab tr th a {
+  text-align: center;
+  font-family: Krub;
+  font-size: 20px;
+  color: white;
+}
+.tab tr th a:hover {
+ color: yellow;
+}
+
+.tr {
+
+  background-color: black;
+}
+.th a {
+  text-decoration: none;
+  color: white;
+}
+img {width:400px;height:300px;}
+
+
+.signupstyle2 {
+  font-size: 20px;
+  font-family: sans-serif;
+  text-align: center;
+}
+.signupstyle1 {
+  font-size: 20px;
+  font-family: sans-serif;
+}
+/*----------HOME PAGE END-------------*/
+/*----------SIGNUP PAGE START-------------*/
+#signup-box {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 100px;
+  height: 400px;
+  width: 600px;
+  box-sizing: border-box;
+  border: 2px solid black;
+
+}
+.left-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 30px;
+  width: 400px;
+  height: 400px;
+}
+
+.left-box input{
+  display: block;
+  margin-bottom: 20px;
+  padding: 4px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #aaa;
+  font-family: sans-serif;
+  font-weight: 150;
+  font-size: 15px;
+  width: 200px;
+  transition: 0.2s ease;
+}
+
+input[type="submit"]
+{
+  margin-bottom: 28px;
+  width: 100px;
+  height: 32px;
+  background: blue;
+  border: none;
+  color: white;
+  font-family: sans-sherif;
+  font-weight: 500;
+  cursor: pointer;
+  text-transform: uppercse;
+}
+input[type="submit"]:hover
+{
+  color: black;
+}
+.right-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 30px;
+  width: 310px;
+  height: 400px;
+}
+.right-box > button {
+    margin-bottom: 20px;
+    margin-left: 15px;
+    margin-top: 50px;
+    width: 220px;
+    height: 36px;
+    border: none;
+    color: white;
+    background: black;
+    font-family: sans-serif;
+    cursor: pointer;
+  }
+.right-box > button > a {
+    text-decoration: none;
+    color: white;
+  }
+.right-box > button > a:hover {
+    color: yellow;
+  }
+  /*----------END OF SINGUP PAGE-------------*/
+  /*----------ABOUTUS PAGE START-------------*/
+.t1 span  {
+    font-size: 18px;
+    font-family: Kanit;
+  }
+.para {
+    font-size: 30px;
+    font-family: Orbitron;
+    text-shadow: 2px 2px #A9A9A9;
+    font-weight: bold;
+    margin: auto;
+    margin-left: 100px;
+  }
+
+.p1 {
+    font-size: 18px;
+    font-family: Orbitron;
+    margin-left: 150px;
+    margin-right: 100px;
+  }
+
+.t2 {
+    margin-left: 100px;
+    font-family: Kanit;
+    text-decoration: underline;
+  }
+  /*----------END OF ABOUTUS PAGE-------------*/
+  /*----------TRAVEL TIPS START-------------*/
+.p1 {
+    font-size: 18px;
+    font-family: Calibri;
+    margin-left: 150px;
+    margin-right: 100px;
+  }
+.p1 span {
+    font-size: 18px;
+    font-family: Kanit;
+    font-weight: bold;
+
+  }
+  /*----------TRAVEL TIPS END-------------*/
+  /*----------FOOTER START-------------*/
+
+.main-footer{
+    background: black;
+    height: 200px;
+    color: white;
+    list-style:none;
+}
+.main-footer .list-unstyled > li {
+    list-style:none;
+    margin: 10px;
+    font-size: 18px;
+    color: white;
+
+}
+
+.main-footer .list-inline-item{
+    list-style:none;
+    color: white;
+}
+
+
+.menu-footer > ul > li {
+    list-style:none;
+    color: white;
+    float: left;
+    font-family: sans-serif;
+    font-size: 20px;
+    margin: 20px;
+  }
+
+.menu-footer > ul > li > a {
+    display: inline-block;
+    list-style:none;
+    padding: 15px 20px;
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    color: white;
+  }
+
+.img-fluid{
+width:90px;
+height:100px;
+}
+/*
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+
+  }
+
+.menu-footer > ul {
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+  }
+
+.menu-footer > ul > li > a {
+
+    display: inline-block;
+    padding: 15px 20px;
+    height: 40px;
+    line-height: 40px;
+    text-decoration: none;
+    color:black;
+  }
+.menu-footer a:hover{
+    background-color: black;
+    color: black;
+  }
+*/
+
+.social-menu li{
+    display: inline-block;
+    margin-left: 10px;
+
+  }
+
+.social-menu img{
+   line-height: 5px;
+    height: 5px;
+    width: 5px;
+    padding: 0;
+    margin-left: 2px;
+ }
+
+.contact-details ul{
+    margin-right: 0px;
+ }
+
+.text-white{
+ font-size: 40px;
+ float: right;
+}
+
+
+.container{
+
+    text-align: justify;
+    margin-left: 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color:black;
+  }
+
+.container button{
+
+    background-color: black;
+    color: white;
+    padding: 5px 10px;;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+  }
+.container form{
+    width: 700px;
+  }
+
+.container button:hover{
+
+    background-color: yellow;
+    color: black;
+    font-family: sans-serif;
+    text-decoration: none;
+  }
+
+*/
+
+/*----------FOOTER END-------------*/
+/* GAYATHRI  */
+
+/* ASIF  */
+
+/* VERONICA  */
+/*styling for the blog*/
+
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.article-title {
+  color: #444444;
+}
+
+a.article-title:hover {
+  color: #428bca;
+  text-decoration: none;
+}
+
+.article-content {
+  white-space: pre-line;
+}
+
+.article-img {
+  height: 65px;
+  width: 65px;
+  margin-right: 16px;
+}
+
+.article-metadata {
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #e3e3e3
+}
+
+.article-metadata a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.article-svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+}

@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+
+<!-- Hero Section-->
+    <section style="background: url({% static 'blog/images/air.jpg' %}); background-size: cover; background-position: center center; min-height: 400px;" class="hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7">
+                 <h1> A TRAVEL BLOG </h1>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- Intro Section-->
+    <section class="intro">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="h3">WELCOME TO OUR COMMUNITY </h2>
+              <p class="text-big"><strong>Wanderlust</strong> has grown into a large adventure travel blog full of useful travel information based on personal
+                recommendations, combined with inspirational articles on our travel blogging journey around the world.
+                Every month, hundreds and thousands of people come to our site to read our story, follow our misadventures,
+                seek our travel advice and get information on how we’ve managed to turn our blog into a business.</p>
+          </div>
+        </div>
+    </section>
+
+ <div class="container">
+     <div class="row">
+         <main  class="posts-listing col-lg-8">
+       <div class="container ">
+        <div class="row ">
+      <!--post-->
+          {% for post in posts %}
+              <article class="posts-listing col-xl-8">
+                    <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}">
+                    <div class="media-body">
+                        <div class="article-metadata">
+                            <a  class="mr-2" href="#"><font size='8'>{{ post.author }}</font></a>
+                            <small class="text-muted">{{ post.date_posted| date:"F d, Y" }}</small>
+                        </div>
+                        {% if post.image %}
+                        <img src='{{ post.image.url }}' class='img-responsive' style="width:100%;height:20;"/><br>
+                        {% endif %}
+                        <h2><a style="color:red;" class="article-title" href="{% url 'post-detail' post.id %}"><u>{{ post.title }}</u></a></h2>
+                        <h2><a style="color:black;" class="article-title" href="{% url 'post-detail' post.id %}"><u> read more</u></a></h2>
+                    </div>
+                  </article>
+                 {% endfor %}
+            </div>
+           <!-- Pagination -->
+              <nav aria-label="Page navigation example">
+                <ul class="pagination pagination-template d-flex justify-content-center">
+                  {% if posts.has_previous %}
+                    <a class="btn btn-outline-info mb-4" href="?page=1">First</a>
+                    <li class="page-item"><a href="?page={{ posts.previous_page_number }}" class="page-link"> <i class="fa fa-angle-left"></i></a></li>
+                  {% endif %}
+                  <li class="page-item"><a href="?{{ page_request_var }}={{ posts.number }}" class="page-link active">{{ posts.number }}</a></li>
+                  {% if posts.has_next %}
+                    <li class="page-item"><a href="?page={{ posts.next_page_number }}" class="page-link"> <i class="fa fa-angle-right"></i></a></li>
+                    <a class="btn btn-outline-info mb-4" href="?page={{ posts.paginator.num_pages }}">Last</a>
+                  {% endif %}
+                </ul>
+              </nav>
+           </div>
+         </main>
+        {% include 'sidebar.html' with most_recent=most_recent %}
+      </div>
+ </div>
+
+ <!-- Divider Section-->
+         <section style="background: url({% static 'blog/images/worldtravel.jpg' %}); background-size: cover; background-position: center center" class="random">
+              <div class="divider">
+                   <div class="col-lg-7">
+                       <a href="#"><span style="color: black;">BE A MEMBER</span></a>
+                   </div>
+                <br>
+                    <button class="btn btn-danger" type="submit">
+                         <a class="btn btn-danger" href="{% url 'register' %}">
+                             Register
+                         </a>
+                    </button>
+              </div>
+         </section>
+
+
+
+{% endblock %}
+

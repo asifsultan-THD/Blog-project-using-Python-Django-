@@ -1,0 +1,79 @@
+<aside class="col-lg-4">
+      <!-- Widget [Search Bar Widget]-->
+      <div class="widget search">
+        <header>
+          <h3 class="h6">Search the blog</h3>
+        </header>
+        <form action="{% url 'search' %}" class="search-form">
+          <div class="form-group">
+            <input type="text" name="q" placeholder="Search">
+            <button type="submit" class="submit"><i class="fa fa-search"></i></button>
+          </div>
+        </form>
+      </div>
+     <br>
+     <br>
+     <br>
+
+    <!-- Widget [Latest Posts Widget]        -->
+    <section class="latest-posts">
+        <header>
+          <h4>LATEST POSTS</h4>
+          <p class="text-small">Explore our latest posts.</p>
+        </header>
+        <div class="blog-posts">
+              {% for post in latest %}
+             <div class="post col-md-6">
+                    <div class="post-details">
+                      <div class="post-meta d-flex justify-content-between">
+                        <div class="time">{{ post.date_posted| date:"F d, Y" }}</div>
+                      </div>
+                    </div>
+                     <a href="{{ post.get_absolute_url }}">
+                        <div class="item d-flex align-items-center">
+                            <div class="title"><strong>{{ post.title }}</strong>
+                            </div>
+                        </div>
+                     </a>
+             </div>
+              {% endfor %}
+        </div>
+     </section>
+              <br>
+              <br>
+              <br>
+
+    <!-- Widget [Tags Widget]-->
+          <div class="widget tags">
+            <header>
+              <h2 class="h4">Tags counter</h2>
+            </header>
+            {% for tag in tag_count %}
+            <div class="item d-flex justify-content-between">
+              <a>{{ tag.tags__title }}</a><span>{{ tag.tags__title__count }}</span>
+            </div>
+            {% endfor %}
+
+              <br>
+              <br>
+              <br>
+
+        <!-- Tag Filter -->
+
+        <div class="widget tags">
+            <h4>Tags Filter</h4>
+            <h6> Click here for tags details </h6>
+          <!-- Post Filters based on Tags-->
+            <div class="filterbutton">
+               <form class="form-inline my-2 my-lg-0">
+                    <button class="btn btn-primary" type="submit">
+                       <a class="btn btn-primary" href="{% url 'tagsfilter' %}">
+                          Tags Filter
+                       </a>
+                    </button>
+               </form>
+            </div>
+        </div>
+
+      </div>
+</aside>

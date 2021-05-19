@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+    <div class="tab">
+      <table>
+        <tr>
+          <th> <a href="{% url 'exploreindia' %}" title="Explore India"><img src="{% static 'blog/images/india.jpg' %}" alt="India" height="400"/><br/><p>Life in India</p></a></th>
+          <th> <a href="{% url 'explorecolombia' %}" title="Explore Colombia"><img src="{% static 'blog/images/colombia.jpg' %}" alt="Colombia" height="400"/><br/><p>Life in Colombia</p></a></th>
+          <th> <a href="{% url 'explorenewyork' %}" title="Explore New York"><img src="{% static 'blog/images/ny.jpg' %}" alt="NYCity" height="400"/><br/><p>Life in New York</p></a></th>
+        </tr>
+        <tr>
+          <th> <a href="{% url 'exploregermany' %}" title="Explore Germany"><img src="{% static 'blog/images/germany.jpg' %}" alt="Germany" height="400"/><br/><p>Life in Germany</p></a></th>
+          <th> <a href="{% url 'exploreegypt' %}" title="Explore Egypt"><img src="{% static 'blog/images/egypt.jpg' %}" alt="Egypt" height="400"/><br/><p>Life in Egypt</p></a></th>
+          <th> <a href="{% url 'exploreparis' %}" title="Explore Paris"><img src="{% static 'blog/images/eiffel.jpg' %}" alt="Paris" height="400"/><br/><p>Life in Paris</p></a></th>
+        </tr>
+      </table>
+    </div>
+        <br/> <br/>
+
+
+{% endblock %}
